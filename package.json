@@ -1,8 +1,5 @@
 
 {
-    "scripts": {
-    "start": "node server.js"
-}
   "name": "ranytany",
   "version": "14.16.1",
   "description": "my package",
@@ -20,4 +17,8 @@
     "url": "https://github.com/SupremeButter/multiplayer-snake-game-master/issues"
   },
   "homepage": "https://github.com/SupremeButter/multiplayer-snake-game-master#readme"
+    
+    "scripts": {
+   "start": "node index.js"
+  }
 }
