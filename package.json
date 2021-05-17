@@ -1,3 +1,7 @@
+"scripts": {
+    "start": "node server.js"
+}
+
 {
   "name": "ranytany",
   "version": "14.16.1",
