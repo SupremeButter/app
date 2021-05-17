@@ -5,6 +5,7 @@
   "description": "my package",
   "main": "index.js",
   "scripts": {
+    "start": "node script1.js"
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,8 +18,4 @@
     "url": "https://github.com/SupremeButter/multiplayer-snake-game-master/issues"
   },
   "homepage": "https://github.com/SupremeButter/multiplayer-snake-game-master#readme"
-    
-    "scripts": {
-   "start": "node index.js"
-  }
 }
