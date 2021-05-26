@@ -4,7 +4,7 @@ const SNAKE2_COLOUR = '#FF0000'
 const FOOD_COLOUR = '#00FF00';
 
 const socket = io('https://warm-beach-39445.herokuapp.com/');
-Access-Control-Allow-Origin: 'https://stoic-sinoussi-9d08f5.netlify.app/'
+Access-Control-Allow-Origin: ('https://stoic-sinoussi-9d08f5.netlify.app/')
 
 socket.on('init', handleInit);
 socket.on('gameState', handleGameState);
