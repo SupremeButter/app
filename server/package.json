@@ -4,7 +4,6 @@
   "description": "my package",
   "main": "server.js",
   "scripts": {  
-  "build": "nodemon server.js"
   },
   "repository": {
     "type": "git",
