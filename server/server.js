@@ -1,4 +1,10 @@
-const io = require('socket.io')();
+const io = require("socket.io")(httpServer, {
+  cors: {
+    origin: "https://stoic-sinoussi-9d08f5.netlify.app",
+    methods: ["GET", "POST"]
+  }
+});
+
 const { initGame, gameLoop, getUpdatedVelocity } = require('./game');
 const { FRAME_RATE } = require('./constants');
 const { makeid } = require('./utils');
@@ -10,6 +16,7 @@ io.on('connection', (socket) => {
   console.log('Client connected');
   socket.on('disconnect', () => console.log('Client disconnected'));
 });
+
 
 
 io.on('connection', client => {
