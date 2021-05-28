@@ -11,7 +11,7 @@ const clientRooms = {};
 const cors = require('cors')
 
 const corsOptions = {
-  origin: 'https://online-multiplayer-snake-game.herokuapp.com/',
+  origin: 'https://60b0c5fd698bc90007f55427--stoic-sinoussi-9d08f5.netlify.app/',
 }
 
 app.get('/products/:id', cors(corsOptions), (req, res, next) => {
