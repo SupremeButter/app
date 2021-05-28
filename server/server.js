@@ -8,11 +8,13 @@ const { makeid } = require('./utils');
 const state = {};
 const clientRooms = {};
 
-const cors = require('cors')
-
-const corsOptions = {
-  origin: 'https://60b0c5fd698bc90007f55427--stoic-sinoussi-9d08f5.netlify.app/',
+var corsOptions = {
+    origin: 'https://60b0c5fd698bc90007f55427--stoic-sinoussi-9d08f5.netlify.app/',
+    optionsSuccessStatus: 200 // For legacy browser support
+    methods: "GET, PUT"
 }
+
+app.use(cors(corsOptions));
 
 app.get('/products/:id', cors(corsOptions), (req, res, next) => {
   //...
