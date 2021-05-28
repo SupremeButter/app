@@ -2,7 +2,7 @@
   "name": "ranytany",
   "version": "14.16.1",
   "description": "my package",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "npm install && npx nodemon server.js"
   },
