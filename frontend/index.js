@@ -3,13 +3,6 @@ const SNAKE1_COLOUR = '#0000FF';
 const SNAKE2_COLOUR = '#FF0000'
 const FOOD_COLOUR = '#00FF00';
 
-const io = require("socket.io")(httpServer, {
-  cors: {
-    origin: "https://stoic-sinoussi-9d08f5.netlify.app",
-    methods: ["GET", "POST"]
-  }
-});
-
 const socket = io('https://online-multiplayer-snake-game.herokuapp.com/');
 
 socket.on('init', handleInit);
