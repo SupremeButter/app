@@ -4,7 +4,7 @@
   "description": "my package",
   "main": "index.js",
   "scripts": {
-    "start": "npm run"
+    "start": "npm run nodemon"
   },
   "repository": {
     "type": "git",
