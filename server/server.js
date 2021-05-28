@@ -8,17 +8,11 @@ const { makeid } = require('./utils');
 const state = {};
 const clientRooms = {};
 
-var corsOptions = {
-    origin: 'https://60b0c5fd698bc90007f55427--stoic-sinoussi-9d08f5.netlify.app/',
-    optionsSuccessStatus: 200 // For legacy browser support
-    methods: "GET, PUT"
-}
-
-app.use(cors(corsOptions));
-
-app.get('/products/:id', cors(corsOptions), (req, res, next) => {
-  //...
-})
+const cors = require('cors');
+const express = require('express');
+const app = express();
+app.use(cors());
+app.options('*', cors());
 
 io.on('connection', (socket) => {
   console.log('Client connected');
