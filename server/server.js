@@ -1,10 +1,6 @@
-const io = require("socket.io")(httpServer, {
-  cors: {
-    origin: "https://stoic-sinoussi-9d08f5.netlify.app",
-    methods: ["GET", "POST"]
-  }
-});
-
+var express = require('express')
+var app = express();
+const io = require('socket.io')();
 const { initGame, gameLoop, getUpdatedVelocity } = require('./game');
 const { FRAME_RATE } = require('./constants');
 const { makeid } = require('./utils');
@@ -12,12 +8,20 @@ const { makeid } = require('./utils');
 const state = {};
 const clientRooms = {};
 
+const cors = require('cors')
+
+const corsOptions = {
+  origin: 'https://online-multiplayer-snake-game.herokuapp.com/',
+}
+
+app.get('/products/:id', cors(corsOptions), (req, res, next) => {
+  //...
+})
+
 io.on('connection', (socket) => {
   console.log('Client connected');
   socket.on('disconnect', () => console.log('Client disconnected'));
 });
-
-
 
 io.on('connection', client => {
 
