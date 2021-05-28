@@ -3,7 +3,7 @@
   "version": "14.16.1",
   "description": "my package",
   "main": "index.js",
-  "scripts": { 
+  "scripts": {
    "start": "nodemon --exec npm start",
  },
   "repository": {
