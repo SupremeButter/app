@@ -4,6 +4,7 @@
   "description": "my package",
   "main": "server.js",
   "scripts": {  
+    "start":"npm install"
   },
   "repository": {
     "type": "git",
