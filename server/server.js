@@ -16,7 +16,11 @@ app.get('/products/:id', cors(corsOptions), function (req, res, next) {
 app.listen(3000, function () {
   console.log('CORS-enabled web server listening on port 3000')
   })
-const io = require('socket.io')();
+const io = require('socket.io')(); {
+            websockets(app, {
+  allowEIO3: true // false by default
+});
+           }
 const { initGame, gameLoop, getUpdatedVelocity } = require('./game');
 const { FRAME_RATE } = require('./constants');
 const { makeid } = require('./utils');
