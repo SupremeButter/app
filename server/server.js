@@ -5,7 +5,7 @@ var app = express()
 app.use(cors())
 
 var corsOptions = {
-  origin: 'http://example.com',
+  origin: 'https://online-multiplayer-snake-game.herokuapp.com/',
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }
 
@@ -14,7 +14,7 @@ app.get('/products/:id', cors(corsOptions), function (req, res, next) {
 })
 
 app.listen(3000, function () {
-  console.log('CORS-enabled web server listening on port 80')
+  console.log('CORS-enabled web server listening on port 3000')
   })
 const io = require('socket.io')();
 const { initGame, gameLoop, getUpdatedVelocity } = require('./game');
