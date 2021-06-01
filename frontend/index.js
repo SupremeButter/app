@@ -4,24 +4,6 @@ const SNAKE2_COLOUR = '#FF0000'
 const FOOD_COLOUR = '#00FF00';
 
 const socket = io('https://online-multiplayer-snake-game.herokuapp.com');
-var express = require('express')
-var cors = require('cors')
-var app = express()
-
-app.use(cors())
-
-var corsOptions = {
-  origin: 'https://stoic-sinoussi-9d08f5.netlify.app/',
-  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-}
-
-app.get('/products/:id', cors(corsOptions), function (req, res, next) {
-  res.json({msg: 'This is CORS-enabled for only example.com.'})
-})
-
-app.listen(3000, function () {
-  console.log('CORS-enabled web server listening on port 3000')
-  })
 
 socket.on('init', handleInit);
 socket.on('gameState', handleGameState);
