@@ -3,7 +3,6 @@ const SNAKE1_COLOUR = '#0000FF';
 const SNAKE2_COLOUR = '#FF0000'
 const FOOD_COLOUR = '#00FF00';
 
-const io = require("socket.io-client");
 const socket = io("https://online-multiplayer-snake-game.herokuapp.com", {
   withCredentials: true
 });
