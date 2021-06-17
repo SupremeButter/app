@@ -1,11 +1,4 @@
-app.all(‘*’, (req, res, next) => {
-  res.header(‘Access-Control-Allow-Origin’, ‘*’);
-  res.header(‘Access-Control-Allow-Methods’, ‘PUT, GET, POST, DELETE, PATCH, OPTIONS’);
-  res.header(‘Access-Control-Allow-Headers’, ‘*’);
-  res.header(‘Access-Control-Allow-Credentials’, true);
-  next();
-});
-
+var socket = io('https://online-multiplayer-snake-game.herokuapp.com',{origins:"*"});
 const io = require("socket.io")(httpServer, {
   allowEIO3: true // false by default
 });
